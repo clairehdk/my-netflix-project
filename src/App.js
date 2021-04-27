@@ -3,20 +3,20 @@ import movies from "./movies.json";
 
 // Composants
 
-import Section from "./components/Section";
+// import Section from "./components/Section";
 
 function App() {
   return (
     <div>
       {movies.map((elem, index) => {
-        {
-          elem.images.map((img, index) => {
-            return <Section title={elem.category} image={img} />;
-          });
-        }
+        return (
+          <div>
+            <h2>{elem.category}</h2>
+            <img src={elem.images}></img>
+          </div>
+        );
       })}
     </div>
   );
 }
-
 export default App;
