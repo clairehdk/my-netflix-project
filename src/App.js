@@ -1,3 +1,5 @@
+import logo from "../src/assets/img/logo.png";
+
 import "./App.css";
 import movies from "./movies.json";
 
@@ -7,12 +9,17 @@ import movies from "./movies.json";
 
 function App() {
   return (
-    <div>
+    <div class="container">
+      <img class="logo" src={logo} />
       {movies.map((elem, index) => {
         return (
-          <div>
+          <div class="block">
             <h2>{elem.category}</h2>
-            <img src={elem.images}></img>
+            <div class="cat">
+              {elem.images.map((image, index) => {
+                return <img src={image}></img>;
+              })}
+            </div>
           </div>
         );
       })}
