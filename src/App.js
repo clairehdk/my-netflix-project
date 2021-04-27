@@ -4,6 +4,7 @@ import movies from "./movies.json";
 // Composants
 
 import Section from "./components/Section";
+
 function App() {
   return (
     <div>
