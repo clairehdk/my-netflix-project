@@ -1,13 +1,10 @@
 import movies from "../movies.json";
-import Category from "./Category";
-console.log(movies);
 
-const Section = (props) => {
+const Section = ({ title, images }) => {
   return (
     <div className="container">
-      {movies.map((elem, index) => {
-        return <Category title={elem.category} />;
-      })}
+      <h2>{title}</h2>
+      <img src={images} />
     </div>
   );
 };
